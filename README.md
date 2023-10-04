@@ -8,12 +8,12 @@ copy the values from the 'nodemon.json' file to the appropriate locations in 'ap
 
 Using mongodb atlas as the database, the database is open to all IPs , the admin credentials are in the 'nodemon.json' file
 
-I have created an example 'users.json' file to represent the list of eligible user
+I have created an example 'users.json' file to represent the list of eligible users.
 
 For mailing, the tool https://www.wpoven.com/tools/free-smtp-server-for-testing is used. 
 you can view the emails inboxes by visit the link, and under 'Outgoing or Incoming email address Inbox' put the user's email address (as shown in 'data/users.json' file) who you try to verify with 
 and click 'Access Inbox', you will be able to view the email sent if you have completed the verification process and the user is eligible for a device, for example: for the user "Max" the email address 
 is "max@email.com".
 
-The logic implemented as for which user is eligible to use the devices - I had each device its own eligibility terms based on the user's over condition, which represented in
+The logic implemented as for which user is eligible to use the devices - I had each device its own eligibility terms based on the user's health condition, which represented in
 a few measurements I have added to each user.
