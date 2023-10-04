@@ -1,0 +1,7 @@
+{
+    "env": {
+    "MONGO_USER": "Tal" ,
+    "MONGO_PASSWORD": "dariohealth",
+    "EMAIL": "mail@dariohealth.com"
+    }
+}

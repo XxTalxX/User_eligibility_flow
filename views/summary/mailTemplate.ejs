@@ -1,0 +1,29 @@
+<li class="devices__item" style="padding: 12pt; margin-bottom: 12pt; display: block; opacity:'100%;">
+    <h1 style="float: left; margin: 0; font-size: 12pt;">User name: <%= user.name %></h1>
+         <h1 style="text-align: right; margin: 0; font-size: 12pt;">User ID: <%= user.ID %> </h1>
+         <h1 id="payment_method" style="margin: 0; font-size: 12pt; text-align: right;"> User Email: <%= user.email %> </h1>
+         <h1 id="order_status" style="margin: 0; font-size: 12pt; text-align: right;"> User Phone: <%= user.phone %> </h1>
+
+        
+        <h1 style="padding-bottom: 5px; margin: 0; font-size: 12pt;">Eligibility Details: </h1>
+     <div class="details" bgcolor="#ecf3f969" style="display: inline-block; min-width: 180pt; box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px; background-color:rgb(253, 215, 145);">
+        <h1 style="display: inline; font-size: 12pt;">Blood Pressure: </h1><p class="left_details" style="padding-left: 7px; display: inline-block; width: 120pt;"> <%= user.eligibility_details.blood_pressure %></p>
+        <br /> 
+        <h1 style="display: inline; font-size: 12pt;">Glucose:  </h1><p class="left_details" style="padding-left: 7px; display: inline-block; width: 120pt;"> <%= user.eligibility_details.glucose %></p>
+         <h1 style="display: inline; font-size: 12pt;">BMI: <p style="font-weight: normal; display: inline-block; padding-right: 7px;"><%= user.eligibility_details.BMI %></p></h1>
+        <br / >
+        <h1 style="display: inline; font-size: 12pt;">Age: <p style="font-weight: normal; display: inline-block; padding-right: 7px;"><%= user.eligibility_details.age %></p></h1>
+    </div>
+    <h3> You're eligible for these devices: </h3>
+        <ul class="devices__products" style="list-style: none; margin: 0; padding: 0;">
+          <% devices.forEach(device => { %>
+            <li class="devices__products-item" style="margin: 6pt 0; padding: 6pt; color: #00695c; box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px; background-color:rgb(253, 215, 145);">
+                <img class="product_image" style="width: 96pt; height: 96pt; display: inline-block; vertical-align: top;" src="<%= device.imageUrl %>">
+                <div class="products_info" style="display: inline-block; padding-left: 12pt;">
+                <h1 style="font-size: 12pt;"> <%= device.title %> </h1>
+                <p> <%= device.price %>$ </p>
+                </div>
+            </li>
+            <% }); %>
+    </ul>
+</li>

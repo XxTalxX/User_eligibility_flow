@@ -1,0 +1,11 @@
+.verify-form {
+  width: 20rem;
+  max-width: 90%;
+  margin: auto;
+  display: block;
+}
+
+.verify-form button {
+  margin: auto;
+  display: block;
+}

@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Dario Blood Pressure Monitoring System ",
+        "price": 70,
+        "description": "Dario’s Blood Pressure Monitoring System empowers you to successfully monitor your blood pressure from the comfort of your home or office. Bluetooth® connectivity lets you store all your readings in the Dario App so you can easily keep tabs on your numbers, make certain your treatment plan is working, and alert you and your doctor to potential health complications.",
+        "imageUrl": "https://shop.mydario.com/wp-content/uploads/2019/11/bp-cuff.png",
+        "eligibility_score": 70
+
+    },
+    {
+        "title": "Dario Blood Glucose Monitoring Starter Kit",
+        "price": 35,
+        "description": "All the tools and support to successfully monitor your diabetes and balance your life Dario’s pocket-sized smartphone glucometer has everything you need to successfully manage your diabetes in one ultra-compact device. The innovative blood glucose meter plugs directly into your smartphone, turning your mobile device into a smart blood glucose monitor that gives you instant accurate results. Together with the Dario mobile app, the Dario blood sugar (glucose) meter enables you to track and check your blood sugar (glucose) in real-time, giving you actionable insights, alerts, and reminders. Dario is FDA cleared and scientifically proven to reduce estimated A1c in only 3 months1.",
+        "imageUrl": "https://shop.mydario.com/wp-content/uploads/2021/08/sk-slide-3.png",
+        "eligibility_score": 50
+    }
+]

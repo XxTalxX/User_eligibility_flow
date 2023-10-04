@@ -1,0 +1,55 @@
+<%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/forms.css">
+    <link rel="stylesheet" href="/css/auth.css">
+</head>
+
+<body>
+   <%- include('../includes/navigation.ejs') %>
+
+    <main>
+        <% if (errorMessage) { %>
+            <div class="user-message user-message--error"><%= errorMessage %></div>
+        <% } %>
+        <form class="verify-form" action="/verify" method="POST">
+            <div class="form-control">
+                <label for="name">Name</label>
+                <input minlength="2" oninput="this.value=this.value.toLowerCase()"
+                    class="<%= validationErrors.find(e => e.param === 'name') ? 'invalid' : '' %>"
+                    type="text" 
+                    name="name" 
+                    id="name" 
+                    value="<%= oldInput.name %>">
+            </div>
+            <div class="form-control">
+                <label for="email">E-Mail</label>
+                <input minlength="3"
+                    class="<%= validationErrors.find(e => e.param === 'email') ? 'invalid' : '' %>"
+                    type="email" 
+                    name="email" 
+                    id="email" 
+                    value="<%= oldInput.email %>">
+            </div>
+            <div class="form-control">
+                <label for="phone">Phone</label>
+                <input minlength="10"
+                    class="<%= validationErrors.find(e => e.param === 'phone') ? 'invalid' : '' %>"
+                    type="tel" 
+                    name="phone" 
+                    id="phone" 
+                    pattern="[0-9]{10}"
+                    value="<%= oldInput.phone %>">
+            </div>
+            <div class="form-control">
+                <label for="ID">ID</label>
+                <input minlength="1"
+                    class="<%= validationErrors.find(e => e.param === 'ID') ? 'invalid' : '' %>"
+                    type="text" 
+                    name="ID" 
+                    id="ID" 
+                    value="<%= oldInput.ID %>">
+            </div>
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <button class="btn" type="submit">Verify</button>
+        </form>
+    </main>
+<%- include('../includes/end.ejs') %>
